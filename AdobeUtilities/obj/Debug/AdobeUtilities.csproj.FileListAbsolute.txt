@@ -1,0 +1,8 @@
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\obj\Debug\AdobeUtilities.csprojResolveAssemblyReference.cache
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\obj\Debug\AdobeUtilities.csproj.CoreCompileInputs.cache
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\bin\Debug\AdobeUtilities.dll
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\bin\Debug\AdobeUtilities.pdb
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\bin\Debug\Interop.Acrobat.dll
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\obj\Debug\AdobeUtilities.csproj.CopyComplete
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\obj\Debug\AdobeUtilities.dll
+C:\Users\Siddhant Sahu\source\repos\AdobeUtilities\obj\Debug\AdobeUtilities.pdb

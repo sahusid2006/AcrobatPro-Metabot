@@ -188,28 +188,31 @@ namespace AutomationAnywhere
                         while (TextCheck == true)
                         {
                             //Going to the page next to the previous search result - Not incremented by 1 since PageNum was already incremented for recording.
-                            ScanPage = PageNum;
-                            if (ScanPage == iNum)
-                            {
-                                TextCheck = false;
-                                break;
-                            }
+                            ScanPage = PageNum + 1;
+
                             GoToStatus = avPage.GoTo(ScanPage);
                             TextCheck = avDoc.FindText(searchword, bCaseSensitive, bWholeWordsOnly, 0);
                             PageNum = avPage.GetPageNum();
+
+                            //First Page is 0 and thus offset is being taken care of
+                            PageNum = PageNum + 1;
+                            PageList.Add(PageNum);
 
                             //Exit loop in case the previous page number is bigger than the current
                             if (PageNumPrev > PageNum)
                             {
                                 break;
                             }
+
                             //Assigning the page number for this search iteration to a previous variable
                             PageNumPrev = PageNum;
 
-                            //First Page is 0 and thus offset is being taken care of
-                            PageNum = PageNum + 1;
-                            PageList.Add(PageNum);
-
+                            //Exiting if end of document has been reached.
+                            if (ScanPage >= iNum)
+                            {
+                                TextCheck = false;
+                                break;
+                            }
                         }
                     }
                     else

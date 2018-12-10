@@ -188,7 +188,7 @@ namespace AutomationAnywhere
                         while (TextCheck == true)
                         {
                             //Going to the page next to the previous search result - Not incremented by 1 since PageNum was already incremented for recording.
-                            ScanPage = PageNum + 1;
+                            ScanPage = PageNum;
 
                             GoToStatus = avPage.GoTo(ScanPage);
                             TextCheck = avDoc.FindText(searchword, bCaseSensitive, bWholeWordsOnly, 0);
@@ -199,7 +199,7 @@ namespace AutomationAnywhere
                             PageList.Add(PageNum);
 
                             //Exit loop in case the previous page number is bigger than the current
-                            if (PageNumPrev > PageNum)
+                            if (PageNumPrev >= PageNum)
                             {
                                 break;
                             }
